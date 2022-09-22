@@ -1,3 +1,5 @@
+import {ChainablePromiseElement} from "webdriverio";
+
 describe('Locators - Test Scenarios',async ()=>{
 
     beforeEach(async ()=>{
@@ -6,14 +8,18 @@ describe('Locators - Test Scenarios',async ()=>{
     })
     it('CSS example', async () => {
        
-        const createdLink = await $('#created')
+        const createdLink : WebdriverIO.Element  = await $('#created')
 
-        createdLink.scrollIntoView()
-        createdLink.click()
+        await createdLink.scrollIntoView()
+        await createdLink.click()
         const linkResponse = await $('#linkResponse')
-        linkResponse.scrollIntoView()
+        await linkResponse.scrollIntoView();
         // await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 201 and status text Created')
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus')
+
+        const txt =await linkResponse.getText();
+        console.log(txt)
+        // expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus')
+        expect(txt.includes('Link has responded with staus'));
 
         /*
         <p id="linkResponse">Link has responded with staus <b>201</b> and status text <b>Created</b></p>
