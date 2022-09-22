@@ -32,7 +32,7 @@ https://nodejs.org/es/download/
 Install project dependencies with: npm i 
 
 
-"@wdio/selenium-standalone-service": "^7.24.1",
+
 
 Необходимо установить JDK (Java ) по ссылке
 

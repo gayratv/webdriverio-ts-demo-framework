@@ -4,8 +4,14 @@
             "node",
             "webdriverio/async",
             "@wdio/mocha-framework",
-            "expect-webdriverio"
+            "expect-webdriverio",
+            "@wdio/devtools-service"
         ],
-        "target": "ES5"
+        "target": "ESNext",
+        "moduleResolution": "Node16",
+        "include": [
+            "./test/**/*.ts",
+            "./src/types/**/*.ts"
+        ]
     }
 }
