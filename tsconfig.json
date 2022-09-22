@@ -1,17 +1,21 @@
 {
-    "compilerOptions": {
-        "types": [
-            "node",
-            "webdriverio/async",
-            "@wdio/mocha-framework",
-            "expect-webdriverio",
-            "@wdio/devtools-service"
-        ],
-        "target": "ESNext",
-        "moduleResolution": "Node16",
-        "include": [
-            "./test/**/*.ts",
-            "./src/types/**/*.ts"
-        ]
-    }
+  "compilerOptions": {
+    "types": [
+      "node",
+      "webdriverio/async",
+      "@wdio/mocha-framework",
+      "expect-webdriverio",
+      "@wdio/devtools-service"
+    ],
+    "target": "ESNext",
+    "moduleResolution": "Node16"
+  },
+  "include": [
+    "./test/**/*.ts",
+    "./src/types/**/*.ts",
+    "wdio.conf.ts"
+  ],
+  "exclude": [
+    "./node_modules/**/*.ts"
+  ]
 }
